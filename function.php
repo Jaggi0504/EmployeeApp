@@ -2,7 +2,7 @@
 function showDetails($ename)
 {
 include "connection.php";
-$sql="SELECT * FROM `employee` WHERE `ename` = '$ename' ";
+$sql="SELECT * FROM `employee` WHERE `ename` LIKE '$ename%' ";
 $run=mysqli_query($con,$sql);
 if(@mysqli_num_rows($run)>0)
 {
